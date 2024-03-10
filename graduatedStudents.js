@@ -1,3 +1,18 @@
+const graduatedStudents = (listOfStudents) => {
+  const output = [];
+
+  listOfStudents.forEach((student) => {
+    const [name, email, graduated] = [student.name, student.email, student.graduated];
+    if (graduated) {
+      output.push(`${name} has graduated and their diploma will be sent to ${email}.`);
+    } else {
+      output.push(`${name} has not graduated yet, no diploma will be sent.`);
+    }
+  });
+
+  return output;
+};
+
 const students = [
   {
     name: "Ankit",
@@ -73,6 +88,4 @@ const students = [
   },
 ];
 
-const graduatedStudents = (listOfStudents) => {
-//Implement function
-};
+console.log(graduatedStudents(students));
